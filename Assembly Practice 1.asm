@@ -22,6 +22,7 @@ N1 DB 'Digit 1: $'
 N2 DB 'Digit 2: $'  
 N3 DB 'RESULT: $'
 
+; ONLY TYPE DECLARATION
 X DB ?
 Y DB ?
 
@@ -37,11 +38,11 @@ MAIN PROC
     
     ; ========================================= HELLO WORLD PRINT =========================================
     
-    LEA DX, HW     ; LEA = LOAD EFFECTIVE ADDRESS, LEA FOR STRING ONLY AND HW IS A STRING, LOAD TO DX
+    LEA DX, HW     ; LEA = LOAD EFFECTIVE ADDRESS, LEA FOR STRING ONLY AND HW IS A PREDEFINED STRING, LOAD TO DX
     ; DX -> FIXED LOOKUP REGISTOR FOR STRING
     
     MOV AH, 9      ; MOV AH, 9 MEANS IT HAS TO PRINT STRING
-    INT 21H        ; INT = INTERRUPT, HALTS AND DOES ANYTHING AS DIRECTED BY PREV LINES            
+    INT 21H        ; INT = INTERRUPT, HALTS AND DOES ANYTHING AS DIRECTED BY PREV LINE            
     
     ; ========================================= NEW LINE PRINT =========================================
     
